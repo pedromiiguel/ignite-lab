@@ -21,3 +21,31 @@ export const GET_LESSSONS_QUERY = gql`
     }
   }
 `;
+
+export type GetLessonsBySlugResponse = {
+  lesson: {
+    title: string;
+    videoId: string;
+    description: string;
+    teacher: {
+      bio: string;
+      avatarURL: string;
+      name: string;
+    };
+  };
+};
+
+export const GET_LESSON_BY_SLUG = gql`
+  query GetLessonBySlug($slug: String) {
+    lesson(where: { slug: $slug }) {
+      title
+      videoId
+      description
+      teacher {
+        bio
+        avatarURL
+        name
+      }
+    }
+  }
+`;
