@@ -56,7 +56,7 @@ export const Lesson = ({ title, slug, availableAt, type }: LessonProps) => {
           )}
           <span
             className={classNames(
-              'text-xs rounded py-[0.125rem] px-2 text-white border  font-bold',
+              'text-xs rounded py-[0.125rem] px-2 text-white border font-bold whitespace-nowrap',
               {
                 'border-white': isActiveLesson,
                 'border-green-300': !isActiveLesson
